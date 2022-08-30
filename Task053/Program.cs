@@ -31,14 +31,14 @@ int[,] SwapRow(int[,] array)
     for (int i = 0; i < array.GetLength(1); i++)
     {
         //array[0,i] <-> array[rowCount-1,i]
-        int temp = array[0,i];
-        array[0,i] = array[rowCount-1,i];
-        array[rowCount-1,i] = temp;
+        int temp = array[0, i];
+        array[0, i] = array[rowCount - 1, i];
+        array[rowCount - 1, i] = temp;
     }
     return array;
 }
 
-int[,] array = CreateMatrix(3,3);
+int[,] array = CreateMatrix(3, 3);
 PrintMatrix(array);
 Console.WriteLine();
 SwapRow(array);
