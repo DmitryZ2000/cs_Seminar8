@@ -27,20 +27,20 @@ void PrintMatrix(int[,] matrix)
 
 int[,] SwapMatrix(int[,] array)
 {
-    int[,] matrix = new int[array.GetLength(1),array.GetLength(0)];
+    int[,] matrix = new int[array.GetLength(1), array.GetLength(0)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            matrix[j,i] = array[i,j];
+            matrix[j, i] = array[i, j];
         }
     }
-    
+
     return matrix;
 }
 
 
-int[,] array = CreateMatrix(1,4);
+int[,] array = CreateMatrix(1, 4);
 PrintMatrix(array);
 Console.WriteLine();
 int[,] transMatrix = SwapMatrix(array);

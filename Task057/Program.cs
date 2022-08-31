@@ -11,7 +11,7 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-void PrintArray(int [] array)
+void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -40,14 +40,14 @@ void SortArray(int[] array)
     }
 }
 
-int [] Convert2Demetion2One(int[,] array2)
+int[] Convert2Demetion2One(int[,] array2)
 {
-    int [] array1 = new int[array2.GetLength(0)*array2.GetLength(1)];
+    int[] array1 = new int[array2.GetLength(0) * array2.GetLength(1)];
     for (int i = 0; i < array2.GetLength(0); i++)
     {
         for (int j = 0; j < array2.GetLength(1); j++)
         {
-            array1[i*array2.GetLength(1)+j] = array2[i,j];
+            array1[i * array2.GetLength(1) + j] = array2[i, j];
         }
     }
     return array1;
@@ -56,23 +56,23 @@ int [] Convert2Demetion2One(int[,] array2)
 void FrequencyNumber(int[] arr)
 {
     int count = 1;
-    for (int i = 0; i < arr.Length-1; i++)
+    for (int i = 0; i < arr.Length - 1; i++)
     {
-        if(arr[i] == arr[i+1]) count++ ;
-        else if(arr[i] != arr[i+1])
+        if (arr[i] == arr[i + 1]) count++;
+        else if (arr[i] != arr[i + 1])
         {
             Console.WriteLine($"Количество {arr[i]} = {count}");
             count = 1;
-        }  
+        }
         //   Console.WriteLine($"Количество {arr[i]} = {count}");
-        if(arr[i] == arr[i+1] && i+1 == arr.Length-1)
+        if (arr[i] == arr[i + 1] && i + 1 == arr.Length - 1)
         {
-           Console.WriteLine($"Количество {arr[i]} = {count}");
-        } 
+            Console.WriteLine($"Количество {arr[i]} = {count}");
+        }
     }
 }
 
-int[,] array2 = new int[3,4]
+int[,] array2 = new int[3, 4]
 {
     {22,3,4,22},
     {5,4,22,3},
@@ -82,7 +82,7 @@ int[,] array2 = new int[3,4]
 // Console.WriteLine();
 PrintMatrix(array2);
 Console.WriteLine();
-int [] array1 = Convert2Demetion2One(array2);
+int[] array1 = Convert2Demetion2One(array2);
 PrintArray(array1);
 SortArray(array1);
 Console.WriteLine();
